@@ -26,7 +26,7 @@ const Footer = () => (
         <div>
           <h4 className="mb-3 font-heading font-semibold">Contacto</h4>
           <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2"><Phone className="h-4 w-4" /> +58 4XX-XXXXXXX</span>
+            <span className="flex items-center gap-2"><Phone className="h-4 w-4" /> +58 412-6791707</span>
             <span className="flex items-center gap-2"><Mail className="h-4 w-4" /> info@tecnomaxsolutions.com</span>
           </div>
         </div>
