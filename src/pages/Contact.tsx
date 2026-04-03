@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Phone, Mail, MessageCircle, Send } from "lucide-react";
+import { Phone, Mail, MessageCircle, Send, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const WHATSAPP_URL = "https://wa.me/584126791707?text=Hola%20quiero%20información%20sobre%20sus%20servicios%20de%20Tecno%20Max%20Solutions";
 
@@ -18,15 +19,28 @@ const fadeUp = {
 const Contact = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", phone: "", email: "", service: "", message: "" });
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.phone.trim()) {
       toast({ title: "Error", description: "Por favor completa los campos obligatorios.", variant: "destructive" });
       return;
     }
-    toast({ title: "¡Mensaje enviado!", description: "Nos pondremos en contacto contigo pronto." });
-    setForm({ name: "", phone: "", email: "", service: "", message: "" });
+    setSending(true);
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: form,
+      });
+      if (error) throw error;
+      toast({ title: "¡Mensaje enviado!", description: "Nos pondremos en contacto contigo pronto." });
+      setForm({ name: "", phone: "", email: "", service: "", message: "" });
+    } catch (err) {
+      console.error("Error sending:", err);
+      toast({ title: "Error", description: "No se pudo enviar el mensaje. Intenta de nuevo.", variant: "destructive" });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -60,8 +74,9 @@ const Contact = () => {
                   </SelectContent>
                 </Select>
                 <Textarea placeholder="Mensaje" rows={4} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} maxLength={1000} />
-                <Button type="submit" className="w-full" size="lg">
-                  <Send className="mr-2 h-4 w-4" /> Enviar Mensaje
+                <Button type="submit" className="w-full" size="lg" disabled={sending}>
+                  {sending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Send className="mr-2 h-4 w-4" />}
+                  {sending ? "Enviando..." : "Enviar Mensaje"}
                 </Button>
               </form>
             </motion.div>
