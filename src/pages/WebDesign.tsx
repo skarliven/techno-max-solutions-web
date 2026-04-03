@@ -203,7 +203,7 @@ const WebDesign = () => (
                   <h3 className="font-heading text-xl font-bold text-foreground">{plan.title}</h3>
                   <p className="text-foreground/70">{plan.desc}</p>
                   <a href={WA_WEB} target="_blank" rel="noopener noreferrer" className="mt-2 w-full">
-                    <Button variant={i === 1 ? "hero" : "heroOutline"} className="w-full gap-2">
+                    <Button variant="hero" className="w-full gap-2">
                       <MessageCircle className="h-4 w-4" /> Solicitar cotización
                     </Button>
                   </a>
