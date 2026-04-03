@@ -49,9 +49,48 @@ const portfolio = [
 ];
 
 const plans = [
-  { title: "Página Básica", desc: "Ideal para comenzar presencia online", icon: Globe },
-  { title: "Página Profesional", desc: "Para negocios que quieren crecer", icon: BarChart3 },
-  { title: "Página Completa", desc: "Para negocios que buscan más clientes", icon: Rocket },
+  {
+    title: "Página Básica",
+    desc: "Ideal para comenzar presencia online",
+    icon: Globe,
+    features: [
+      "Diseño de 1 a 3 páginas",
+      "Diseño responsive (móvil y PC)",
+      "Formulario de contacto",
+      "Enlaces a redes sociales",
+      "Dominio y hosting por 1 año",
+    ],
+  },
+  {
+    title: "Página Profesional",
+    desc: "Para negocios que quieren crecer",
+    icon: BarChart3,
+    popular: true,
+    features: [
+      "Hasta 6 páginas personalizadas",
+      "Diseño responsive premium",
+      "SEO básico incluido",
+      "Integración con WhatsApp",
+      "Galería de imágenes / portafolio",
+      "Formulario avanzado",
+      "Dominio y hosting por 1 año",
+    ],
+  },
+  {
+    title: "Página Completa",
+    desc: "Para negocios que buscan más clientes",
+    icon: Rocket,
+    features: [
+      "Páginas ilimitadas",
+      "Diseño responsive premium",
+      "SEO avanzado",
+      "Blog integrado",
+      "Sistema de reservas o catálogo",
+      "Panel administrable",
+      "Soporte prioritario",
+      "Dominio y hosting por 1 año",
+    ],
+  },
 ];
 
 const steps = [
