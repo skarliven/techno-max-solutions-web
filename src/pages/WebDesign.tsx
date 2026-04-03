@@ -10,7 +10,7 @@ import {
 import heroImg from "@/assets/web-hero.jpg";
 import portfolioMusic from "@/assets/portfolio-music.jpg";
 import portfolioDental from "@/assets/portfolio-dental.jpg";
-import portfolioTech from "@/assets/portfolio-tech.jpg";
+import portfolioCarpentry from "@/assets/portfolio-carpentry.jpg";
 
 const WA_WEB = "https://wa.me/584126791707?text=Hola%20quiero%20información%20sobre%20páginas%20web";
 
