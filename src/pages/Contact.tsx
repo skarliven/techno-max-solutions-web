@@ -74,8 +74,9 @@ const Contact = () => {
                   </SelectContent>
                 </Select>
                 <Textarea placeholder="Mensaje" rows={4} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} maxLength={1000} />
-                <Button type="submit" className="w-full" size="lg">
-                  <Send className="mr-2 h-4 w-4" /> Enviar Mensaje
+                <Button type="submit" className="w-full" size="lg" disabled={sending}>
+                  {sending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Send className="mr-2 h-4 w-4" />}
+                  {sending ? "Enviando..." : "Enviar Mensaje"}
                 </Button>
               </form>
             </motion.div>
