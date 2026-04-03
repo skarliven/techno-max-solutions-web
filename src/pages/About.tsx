@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ShieldCheck, Heart, Award, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import profileImg from "@/assets/profile.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
