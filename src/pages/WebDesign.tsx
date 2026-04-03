@@ -44,7 +44,7 @@ const portfolio = [
     title: "Carlos Carpintería",
     desc: "Página web para negocio de carpintería con diseño cálido, galería de trabajos y enfoque en generar cotizaciones.",
     img: portfolioCarpentry,
-    url: null,
+    url: "https://carlosebanos.lovable.app/",
   },
 ];
 
