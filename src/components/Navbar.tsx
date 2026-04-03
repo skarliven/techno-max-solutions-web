@@ -8,6 +8,7 @@ const WHATSAPP_URL = "https://wa.me/584126791707?text=Hola%20quiero%20informaci�
 const navLinks = [
   { to: "/", label: "Inicio" },
   { to: "/servicios", label: "Servicios" },
+  { to: "/paginas-web", label: "Páginas Web" },
   { to: "/robotica", label: "Robótica" },
   { to: "/nosotros", label: "Nosotros" },
   { to: "/contacto", label: "Contacto" },
