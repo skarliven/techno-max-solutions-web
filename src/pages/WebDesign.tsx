@@ -10,7 +10,7 @@ import {
 import heroImg from "@/assets/web-hero.jpg";
 import portfolioMusic from "@/assets/portfolio-music.jpg";
 import portfolioDental from "@/assets/portfolio-dental.jpg";
-import portfolioTech from "@/assets/portfolio-tech.jpg";
+import portfolioCarpentry from "@/assets/portfolio-carpentry.jpg";
 
 const WA_WEB = "https://wa.me/584126791707?text=Hola%20quiero%20información%20sobre%20páginas%20web";
 
@@ -41,10 +41,10 @@ const portfolio = [
     url: "https://www.ljlarsendds.com/",
   },
   {
-    title: "NovaTech Solutions",
-    desc: "Página web para empresa tecnológica con diseño moderno, secciones claras de servicios y enfoque en generación de clientes.",
-    img: portfolioTech,
-    url: null,
+    title: "Carlos Carpintería",
+    desc: "Página web para negocio de carpintería con diseño cálido, galería de trabajos y enfoque en generar cotizaciones.",
+    img: portfolioCarpentry,
+    url: "https://carloscarpinteria.netlify.app/",
   },
 ];
 
