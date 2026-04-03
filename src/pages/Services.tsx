@@ -79,6 +79,22 @@ const Services = () => (
           items={roboticsServices}
           color="gradient-primary"
         />
+
+        {/* Web Design Banner */}
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0} className="rounded-2xl border border-primary/30 bg-gradient-to-r from-primary/5 to-accent/5 p-8 md:p-10 flex flex-col md:flex-row items-center gap-6">
+          <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl gradient-primary shadow-lg">
+            <Globe className="h-8 w-8 text-primary-foreground" />
+          </div>
+          <div className="flex-1 text-center md:text-left">
+            <h3 className="font-heading text-2xl font-bold">Diseño y Desarrollo de Páginas Web</h3>
+            <p className="mt-1 text-muted-foreground">Creamos páginas web modernas, rápidas y diseñadas para atraer clientes a tu negocio.</p>
+          </div>
+          <Link to="/paginas-web">
+            <Button variant="hero" size="lg" className="gap-2 whitespace-nowrap">
+              Ver más <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
+        </motion.div>
       </div>
     </section>
 
