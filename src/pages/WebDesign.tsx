@@ -41,10 +41,10 @@ const portfolio = [
     url: "https://www.ljlarsendds.com/",
   },
   {
-    title: "NovaTech Solutions",
-    desc: "Página web para empresa tecnológica con diseño moderno, secciones claras de servicios y enfoque en generación de clientes.",
-    img: portfolioTech,
-    url: null,
+    title: "Carlos Carpintería",
+    desc: "Página web para negocio de carpintería con diseño cálido, galería de trabajos y enfoque en generar cotizaciones.",
+    img: portfolioCarpentry,
+    url: "https://carloscarpinteria.netlify.app/",
   },
 ];
 
