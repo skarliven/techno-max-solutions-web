@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Globe, Smartphone, MessageCircle, FileText, Target, Zap, Share2,
-  CheckCircle, AlertTriangle, Lightbulb, ArrowRight, Star, Send, BarChart3, Palette, Rocket
+  CheckCircle, AlertTriangle, Lightbulb, ArrowRight, Star, Send, BarChart3, Palette, Rocket, Check
 } from "lucide-react";
 import heroImg from "@/assets/web-hero.jpg";
 import portfolioMusic from "@/assets/portfolio-music.jpg";
