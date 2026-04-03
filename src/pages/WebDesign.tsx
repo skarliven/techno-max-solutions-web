@@ -226,22 +226,36 @@ const WebDesign = () => (
     <section className="py-16 md:py-20">
       <div className="container">
         <SectionHeading title="Opciones para tu negocio" subtitle="Cada proyecto se adapta a tus necesidades" />
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mt-12 grid gap-6 md:grid-cols-3">
-          {plans.map((plan, i) => (
-            <motion.div key={plan.title} variants={fade}>
-              <Card className={`relative border-border bg-card text-center hover:shadow-xl transition-all duration-300 ${i === 1 ? "border-primary/50 ring-1 ring-primary/20" : ""}`}>
-                {i === 1 && (
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mt-12 grid gap-6 md:grid-cols-3 items-stretch">
+          {plans.map((plan) => (
+            <motion.div key={plan.title} variants={fade} className="flex">
+              <Card className={`relative flex flex-col border-border bg-card hover:shadow-xl transition-all duration-300 w-full ${plan.popular ? "border-primary/50 ring-2 ring-primary/20 scale-[1.02]" : ""}`}>
+                {plan.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground">
                     Popular
                   </div>
                 )}
-                <CardContent className="flex flex-col items-center gap-4 p-8">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-                    <plan.icon className="h-7 w-7 text-primary" />
+                <CardContent className="flex flex-col flex-1 gap-5 p-8">
+                  <div className="flex flex-col items-center gap-3 text-center">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
+                      <plan.icon className="h-7 w-7 text-primary" />
+                    </div>
+                    <h3 className="font-heading text-xl font-bold text-foreground">{plan.title}</h3>
+                    <p className="text-foreground/70 text-sm">{plan.desc}</p>
                   </div>
-                  <h3 className="font-heading text-xl font-bold text-foreground">{plan.title}</h3>
-                  <p className="text-foreground/70">{plan.desc}</p>
-                  <a href={WA_WEB} target="_blank" rel="noopener noreferrer" className="mt-2 w-full">
+
+                  <div className="h-px w-full bg-border" />
+
+                  <ul className="flex flex-col gap-3 flex-1 text-left">
+                    {plan.features.map((feat) => (
+                      <li key={feat} className="flex items-start gap-2 text-sm text-foreground/80">
+                        <Check className="h-4 w-4 mt-0.5 shrink-0 text-primary" />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a href={WA_WEB} target="_blank" rel="noopener noreferrer" className="mt-auto w-full">
                     <Button variant="hero" className="w-full gap-2">
                       <MessageCircle className="h-4 w-4" /> Solicitar cotización
                     </Button>
