@@ -19,15 +19,28 @@ const fadeUp = {
 const Contact = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", phone: "", email: "", service: "", message: "" });
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name.trim() || !form.phone.trim()) {
       toast({ title: "Error", description: "Por favor completa los campos obligatorios.", variant: "destructive" });
       return;
     }
-    toast({ title: "¡Mensaje enviado!", description: "Nos pondremos en contacto contigo pronto." });
-    setForm({ name: "", phone: "", email: "", service: "", message: "" });
+    setSending(true);
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: form,
+      });
+      if (error) throw error;
+      toast({ title: "¡Mensaje enviado!", description: "Nos pondremos en contacto contigo pronto." });
+      setForm({ name: "", phone: "", email: "", service: "", message: "" });
+    } catch (err) {
+      console.error("Error sending:", err);
+      toast({ title: "Error", description: "No se pudo enviar el mensaje. Intenta de nuevo.", variant: "destructive" });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
