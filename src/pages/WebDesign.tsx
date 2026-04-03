@@ -190,7 +190,7 @@ const WebDesign = () => (
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mt-12 grid gap-6 md:grid-cols-3">
           {plans.map((plan, i) => (
             <motion.div key={plan.title} variants={fade}>
-              <Card className={`relative border-border/50 bg-card/50 backdrop-blur-sm text-center hover:shadow-xl transition-all duration-300 ${i === 1 ? "border-primary/50 ring-1 ring-primary/20" : ""}`}>
+              <Card className={`relative border-border bg-card text-center hover:shadow-xl transition-all duration-300 ${i === 1 ? "border-primary/50 ring-1 ring-primary/20" : ""}`}>
                 {i === 1 && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-bold text-primary-foreground">
                     Popular
@@ -200,8 +200,8 @@ const WebDesign = () => (
                   <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
                     <plan.icon className="h-7 w-7 text-primary" />
                   </div>
-                  <h3 className="font-heading text-xl font-bold">{plan.title}</h3>
-                  <p className="text-muted-foreground">{plan.desc}</p>
+                  <h3 className="font-heading text-xl font-bold text-foreground">{plan.title}</h3>
+                  <p className="text-foreground/70">{plan.desc}</p>
                   <a href={WA_WEB} target="_blank" rel="noopener noreferrer" className="mt-2 w-full">
                     <Button variant={i === 1 ? "hero" : "heroOutline"} className="w-full gap-2">
                       <MessageCircle className="h-4 w-4" /> Solicitar cotización
