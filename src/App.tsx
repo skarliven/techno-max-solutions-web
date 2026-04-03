@@ -9,6 +9,7 @@ import Robotics from "./pages/Robotics.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import WebDesign from "./pages/WebDesign.tsx";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/servicios" element={<Services />} />
           <Route path="/robotica" element={<Robotics />} />
+          <Route path="/paginas-web" element={<WebDesign />} />
           <Route path="/nosotros" element={<About />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
