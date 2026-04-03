@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Monitor, Shield, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const WHATSAPP_URL = "https://wa.me/584XXXXXXXXX?text=Hola%20quiero%20información%20sobre%20sus%20servicios";
+const WHATSAPP_URL = "https://wa.me/584126791707?text=Hola%20quiero%20información%20sobre%20sus%20servicios%20de%20Tecno%20Max%20Solutions";
 
 const navLinks = [
   { to: "/", label: "Inicio" },

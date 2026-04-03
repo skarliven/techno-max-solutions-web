@@ -8,7 +8,7 @@ import { Phone, Mail, MessageCircle, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
 
-const WHATSAPP_URL = "https://wa.me/584XXXXXXXXX?text=Hola%20quiero%20información%20sobre%20sus%20servicios";
+const WHATSAPP_URL = "https://wa.me/584126791707?text=Hola%20quiero%20información%20sobre%20sus%20servicios%20de%20Tecno%20Max%20Solutions";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -76,7 +76,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold">WhatsApp</p>
-                    <p className="text-sm text-muted-foreground">+58 4XX-XXXXXXX</p>
+                    <p className="text-sm text-muted-foreground">+58 412-6791707</p>
                   </div>
                 </a>
                 <div className="flex items-center gap-4 rounded-xl border border-border bg-card p-5">
@@ -85,7 +85,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold">Teléfono</p>
-                    <p className="text-sm text-muted-foreground">+58 4XX-XXXXXXX</p>
+                    <p className="text-sm text-muted-foreground">+58 412-6791707</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 rounded-xl border border-border bg-card p-5">
