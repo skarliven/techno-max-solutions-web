@@ -165,7 +165,7 @@ const WebDesign = () => (
                 <div className="relative overflow-hidden">
                   <img src={p.img} alt={p.title} loading="lazy" width={800} height={600} className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <a href={WA_WEB} target="_blank" rel="noopener noreferrer">
+                    <a href={p.url || WA_WEB} target="_blank" rel="noopener noreferrer">
                       <Button variant="hero" size="sm" className="gap-1">
                         Ver proyecto <ArrowRight className="h-4 w-4" />
                       </Button>
