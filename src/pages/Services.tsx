@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
-import { Monitor, HardDrive, Shield, Settings, Cpu, RotateCcw, Camera, Wifi, UserCheck, Bot, GraduationCap, Gamepad2, ArrowRight } from "lucide-react";
+import { Monitor, HardDrive, Shield, Settings, Cpu, RotateCcw, Camera, Wifi, UserCheck, Bot, GraduationCap, Gamepad2, ArrowRight, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
