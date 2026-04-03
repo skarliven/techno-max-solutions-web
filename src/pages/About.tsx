@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ShieldCheck, Heart, Award, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import profileImg from "@/assets/profile.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -25,16 +26,21 @@ const About = () => (
     </section>
 
     <section className="py-20">
-      <div className="container max-w-3xl">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
-          <h2 className="font-heading text-3xl font-bold">Tecno Max Solutions</h2>
-          <p className="mt-6 text-muted-foreground leading-relaxed">
-            Somos un equipo apasionado por la tecnología, dedicado a ofrecer soluciones confiables y accesibles para hogares y negocios. Con años de experiencia en el sector, nos especializamos en reparación de equipos de cómputo, instalación de sistemas de seguridad y educación tecnológica a través de nuestras clases de robótica.
-          </p>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
-            Nuestro enfoque está en brindar un servicio personalizado, donde cada cliente recibe atención directa y soluciones adaptadas a sus necesidades específicas. Creemos que la tecnología debe ser accesible para todos y trabajamos cada día para hacer eso posible.
-          </p>
-        </motion.div>
+      <div className="container">
+        <div className="grid items-center gap-12 md:grid-cols-2">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
+            <img src={profileImg} alt="Fundador de Tecno Max Solutions" className="mx-auto w-72 rounded-2xl border border-border shadow-lg md:w-80" />
+          </motion.div>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1}>
+            <h2 className="font-heading text-3xl font-bold">Tecno Max Solutions</h2>
+            <p className="mt-6 text-muted-foreground leading-relaxed">
+              Somos un equipo apasionado por la tecnología, dedicado a ofrecer soluciones confiables y accesibles para hogares y negocios. Con años de experiencia en el sector, nos especializamos en reparación de equipos de cómputo, instalación de sistemas de seguridad y educación tecnológica a través de nuestras clases de robótica.
+            </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Nuestro enfoque está en brindar un servicio personalizado, donde cada cliente recibe atención directa y soluciones adaptadas a sus necesidades específicas. Creemos que la tecnología debe ser accesible para todos y trabajamos cada día para hacer eso posible.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </section>
 
