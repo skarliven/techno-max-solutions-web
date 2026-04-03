@@ -32,16 +32,19 @@ const portfolio = [
     title: "Music with Skarli",
     desc: "Página web para clases de violín enfocada en familias. Diseño amigable, claro y optimizado para captar estudiantes.",
     img: portfolioMusic,
+    url: "https://www.musicwithskarli.com/",
   },
   {
     title: "LJ Larsen DDS",
     desc: "Sitio web profesional para clínica dental. Diseño limpio, confiable y enfocado en generar citas.",
     img: portfolioDental,
+    url: "https://www.ljlarsendds.com/",
   },
   {
     title: "NovaTech Solutions",
     desc: "Página web para empresa tecnológica con diseño moderno, secciones claras de servicios y enfoque en generación de clientes.",
     img: portfolioTech,
+    url: null,
   },
 ];
 
